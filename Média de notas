@@ -1,0 +1,36 @@
+#include <stdio.h> //biblioteca padrão para entrada e saida de dados
+
+int main(){
+    char nome[50];//varialvel para armazenar o nome do aluno 
+    float nota1, nota2, nota3, media; //variaveis para armazenar as notas
+    
+    // solicita e recebe o nome do aluno
+    printf("digite o nome do aluno:");
+    scanf("%s", nome);//le o nome completo com espaços 
+    //solicita e recebe a primeira notas
+    printf("Digite a primeira nota:");
+    scanf("%f",&nota1);//le o numero decimal
+    
+    //solicita a recebe a segunda nota
+    printf("digite a segunda nota");
+    scanf("%f", &nota2);//le o numero decimal
+        
+    //solicita a recebe a terceira nota
+    printf("digite a terceira nota");
+    scanf("%f", &nota3);//le o numero decimal
+    
+    //calcula a media das tres notas
+    media =(nota1 + nota2 + nota3) /3;
+    
+    //exibe o nome do aluno e sua media
+    printf("nome do aluno %s\n", nome);
+    printf("media das notas:%.2f\n", media); //exibe a media formatada com 
+    
+    //teste de aprovação: verifica se a media é maior ou igual a 7
+    if(media>=7){//se a media for 7 ou mais, o aluno esta aprovado 
+    printf("status: APROVADO\n");
+    } else {//se a media for menor que 7, aluno esta reprovado 
+    printf("status: REPROVADO\n");
+}
+    
+}
